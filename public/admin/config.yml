@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-actual-username/sveltia-astro-demo
+  repo: Maham-Zapyan/sveltia-astro-demo
   branch: main
 
 local_backend: true
