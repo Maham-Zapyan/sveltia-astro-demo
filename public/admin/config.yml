@@ -2,20 +2,24 @@ backend:
   name: github
   repo: Maham-Zapyan/sveltia-astro-demo
   branch: main
+  # If using Cloudflare Worker OAuth later, add:
+  # base_url: https://your-oauth-worker.your-subdomain.workers.dev
 
+publish_mode: editorial_workflow
 local_backend: true
 
-media_folder: "public/images"
-public_folder: "/images"
+media_folder: "public/images/products"
+public_folder: "/images/products"
 
 collections:
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "src/content/blog"
+  - name: "products"
+    label: "Products"
+    folder: "src/content/products"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "number", value_type: "float" }
+      - { label: "Product Image", name: "image", widget: "image" }
+      - { label: "In Stock", name: "inStock", widget: "boolean", default: true }
+      - { label: "Description", name: "body", widget: "markdown" }
