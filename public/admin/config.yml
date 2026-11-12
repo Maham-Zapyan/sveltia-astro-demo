@@ -2,8 +2,7 @@ backend:
   name: github
   repo: Maham-Zapyan/sveltia-astro-demo
   branch: main
-  # If using Cloudflare Worker OAuth later, add:
-  # base_url: https://your-oauth-worker.your-subdomain.workers.dev
+  base_url: https://sveltia-cms-auth.maham-1c2.workers.dev
 
 publish_mode: editorial_workflow
 local_backend: true
